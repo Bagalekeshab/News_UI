@@ -1,16 +1,21 @@
 
 
-import ContainerPage from './Components/Newspage/Container';
-import Footer from './Components/Newspage/footer';
-import NewsNavbar from './Components/Newspage/nav';
-
-
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NewsPages from "./Components/Newspage/Psmnepal";
+import Pages from "./Components/UI/Pages";
 function App() {
   return (
     <div className="App">
-      <NewsNavbar/>
-      <ContainerPage/>
-      <Footer/>
+
+      <Router>
+        <Routes>
+          <Route path="/" element={<NewsPages/>}></Route>
+          <Route path="page" element={<Pages/>}></Route>
+        </Routes>
+      </Router>
+      
+
       
       
         
